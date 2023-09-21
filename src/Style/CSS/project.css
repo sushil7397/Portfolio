@@ -1,0 +1,153 @@
+
+@import url(font.css);
+
+
+:root{
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --midnight:#104f55;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --sky: linear-gradient(to top, #c2cbfb 0%, #a6c1ee 100%);
+    --lexend:'Lexend',cursive;
+    --Anton:'Anton',cursive;
+    --Abel:'Abel',cursive;
+}
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+}
+section{
+  color: var(--white);
+}
+a{
+  text-decoration: none;
+}
+.projecthead{
+  text-align: center;
+}
+.projecth2{
+  font-size: 2rem;
+}
+.projecth3{
+  font-size: 1.6rem;
+  color: #e2dada;
+  text-align: center;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+
+    
+  }
+
+  .card {
+    width: 300px;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(to top, #33ccff 0%, #6699ff 100%);
+    box-shadow: 0 2px 4px rgba(17, 164, 255, 0.988);
+    animation: ease-in;
+  
+  }
+  .card:hover{
+    background-color: #333;
+    color: var(white);
+    /* cursor: pointer; */
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+
+    margin: 16px;
+    /* color: var(--bg-color); */
+
+  }
+  
+  .card-description {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    /* color: var(--bg-color); */
+
+    margin: 0 16px 16px;
+  }
+  
+  .card p {
+    margin: 0 16px 16px;
+    color: var(--white);
+
+  }
+  
+  .card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  
+  .card a{
+    background: #5dabff;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 15px;
+
+  }
+
+  .card-description .read-more-button{
+    background: linear-gradient(to top, #92cde1 0%, #6c7a7fae 100%);
+
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    display: block;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    margin: 10px 5px;
+  }
+
+  .design-button {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 5px;
+    height: 4rem;
+    padding: 10px 10px;
+    width: 46%;
+    overflow: hidden;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: transparent;
+    vertical-align: top;
+    border-radius: 8px;
+    border: 0.3px solid rgba(68, 92, 107, 0.988);
+    cursor: pointer;
+  }
+  
+  .design-button:hover {
+    background: linear-gradient(to top, #000000 0%, #000000ae 10%);
+  }
+  
+  .design-button:focus {
+    
+    outline: none;
+  }
+
+  .align-center{
+    text-align: center;
+  }

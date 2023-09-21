@@ -1,0 +1,146 @@
+@import url(font.css);
+
+
+* {
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+	top: 2%;
+}
+
+a{
+    text-decoration:none ;
+    color: var(--white);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;;
+    
+}
+
+ul{
+    list-style-type:none ;
+}
+ .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+	font-family: var(--lexend);
+    font-size:1.1rem;
+}
+
+
+.nav-link:hover a{
+    color: #07b0d2;
+}
+.nav-items{
+    display: flex;
+    margin:0 ;
+	gap: 2rem;
+}
+
+.nav{
+    padding:0 2rem ;
+    height: 7rem;
+    min-height: 0vh;
+    overflow: hidden;
+    transition: 1s;
+}
+ .nav-menu{
+    justify-content: space-between;
+}
+
+.toggle-collapse{
+    position:absolute;
+    top: 0%;
+    width:80%;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+ .toggle-icons {
+	font-size: 1.4rem;
+    color: var(--white);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.7rem;
+    margin-left: auto;
+
+}
+img.logo{
+	width: 130px;
+    font-family:var(--lexend);
+	display: block;
+    font-size: 1.6rem;
+}
+.collapse{
+    height: 27.5rem;
+}
+
+
+@media only screen and (max-width:750px) {
+	img.logo{
+		width: 90px;
+		margin-bottom: 1rem;
+	}
+ .nav-menu ,.nav-items{
+        flex-direction: column;   
+        
+    }
+.toggle-collapse{
+        display:initial;
+    }
+   
+}
+
+@media only screen and (max-width:520px){
+	img.logo{
+		width: 90px;
+	}
+ .toggle-collapse{
+        width: 80% !important;
+    }
+
+}
+
+
+
+/*  xxxxxxxx    Viewport less than or equal to 520px   xxxxxx   */
+@media only screen and (max-width:420px){
+.toggle-collapse{
+        width: 70% !important;
+        margin-right: 30px;
+}
+}
+@media only screen and (max-width:280px){
+img.logo{
+        width:70px !important;
+        margin:0.8rem 0rem!important;
+    }
+}
+@media only screen and (max-width:200px){
+img.logo{
+        width:70px !important;
+        margin:1rem 0rem!important;
+        margin-right: 20px;
+    }
+.toggle-collapse{
+        width: 50% !important;
+        margin-left: 30px;
+	}
+}
+
+
+
+@media only screen and (max-width:1920px){
+	.nav-items{
+		gap: 0rem;
+	}
+    img.logo{
+        padding:1rem .9rem !important;
+    }
+}

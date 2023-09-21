@@ -1,0 +1,161 @@
+@import url(font.css);
+
+:root {
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --midnight: #104f55;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --sky: linear-gradient(to top, #c2cbfb 0%, #a6c1ee 100%);
+  --lexend: 'Lexend', cursive;
+  --Anton: 'Anton', cursive;
+  --Abel: 'Abel', cursive;
+}
+
+.aboutHead {
+  margin-top: 8rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.intro {
+  font-size: 1rem;
+  color: rgb(58, 40, 40);
+}
+
+.Aboutsection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
+.aboutimg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 2rem;
+  margin: 2rem 0;
+}
+
+.sidesection {
+  margin: 0 2rem;
+}
+
+.Cardfield {
+  display: flex;
+  padding-top: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  margin: 1rem;
+  width: 10rem;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(17, 164, 255, 0.988);
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  text-align: center;
+}
+
+.fieldp {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+.PDesc {
+  width: 100%;
+  max-width: 700px;
+  font-size: 1rem;
+  color: var(--white);
+  padding: 20px;
+  text-align: justify;
+}
+
+.buttonStyle {
+  background: linear-gradient(to top, #92cde1 0%, #6c7a7fae 100%);
+  padding: 10px 15px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 1.2rem;
+  border: none;
+  text-align: center;
+  
+}
+
+.buttonLink {
+  color: var(--white);
+  font-size: 1rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1080px) {
+  .aboutimg {
+    max-width: 60%;
+    margin: 2rem auto;
+  }
+
+  .sidesection {
+    margin: 0;
+  }
+
+  .PDesc {
+    padding: 10px;
+  }
+
+  .buttonStyle {
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHead {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+  }
+
+  .aboutimg {
+    margin: 1rem auto;
+  }
+
+  .sidesection {
+    margin: 0;
+  }
+
+  .field {
+    margin: 0.5rem;
+  }
+
+  .PDesc {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .buttonStyle {
+    margin: 1.5rem auto;
+  }
+}

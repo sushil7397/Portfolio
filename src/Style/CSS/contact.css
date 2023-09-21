@@ -1,0 +1,137 @@
+
+.Section{
+    margin-top: 8rem;
+}
+
+
+
+.h2contact{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.talkh2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.messh2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.Cicon{
+    font-size: 2rem;
+}
+.Contact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem;
+    justify-content: center;
+}
+.email{
+    text-align: center;
+    border: 0.3px solid rgb(43, 43, 43);
+    border-radius: 1rem;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    padding: 50px;
+    margin: 1rem;
+}
+
+.h4style{
+    margin:0.6rem 0rem;
+    font-weight: bold;
+}
+
+.message{
+    justify-content: center;
+}
+.contactForm{
+    width: 30rem;
+    padding: 50px;
+    border-radius: 1rem;
+    background: transparent;
+}
+.formBox{
+    background-image: linear-gradient(147deg, #000000 0%, #171010 74%);
+    padding: 0rem 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+}
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+
+}
+.inputArea{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    background:transparent;
+    color: var(--white);
+
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+.TextinputArea{
+    width: 100%;
+    padding: 30px 0;
+    font-size: 16px;
+    color: var(--white);
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    background: transparent;
+
+}
+
+.spanText{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+ .inputArea:focus ~ .spanText,
+ .inputArea:valid ~ .spanText,
+ .TextinputArea:focus ~ .spanText,
+ .TextinputArea:valid ~ .spanText{
+    color: #ffffff;
+    font-size: 16px;
+    transform: translateY(-30px);
+}
+
+.butt[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    columns: #fff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 1rem;
+    font-size: 18px;
+
+}
+
+@media (max-width:1080px) {
+    .Contact{
+        gap:5rem;
+    }
+    .contactForm{
+        width: 25rem;
+    }
+    .contactp{
+        flex-wrap: wrap;
+    }
+    
+}

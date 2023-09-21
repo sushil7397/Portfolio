@@ -1,0 +1,51 @@
+@import url(font.css);
+
+
+:root{
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --midnight:#104f55;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --sky: linear-gradient(to top, #c2cbfb 0%, #a6c1ee 100%);
+    --lexend:'Lexend',cursive;
+    --Anton:'Anton',cursive;
+    --Abel:'Abel',cursive;
+}
+*{
+  font-family:var(--lexend);
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+}
+.Educationh2{
+  text-align: center;
+  font-size: 1.8rem;
+}
+.Education {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .education {
+    width: 300px;
+    overflow: hidden;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: transparent !important;
+    box-shadow: 0 2px 4px rgba(17, 164, 255, 0.988);
+    animation: ease-in;
+  
+  }
+  .education:hover{
+    background-color: #333;
+    color: var(white);
+    /* cursor: pointer; */
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+  

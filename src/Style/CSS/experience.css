@@ -1,0 +1,103 @@
+
+@import url(font.css);
+
+
+:root{
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --midnight:#104f55;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --sky: linear-gradient(to top, #c2cbfb 0%, #a6c1ee 100%);
+    --lexend:'Lexend',cursive;
+    --Anton:'Anton',cursive;
+    --Abel:'Abel',cursive;
+}
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+}
+.CertHead{
+  text-align: center;
+}
+.Certh3{
+  font-size: 2rem;
+}
+.Certh4{
+  font-size: 1rem;
+  color: #e2dada;
+
+}
+.certs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    justify-content: center;   
+  }
+
+  .experi {
+    width: 400px;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1rem;
+    background: transparent !important;
+    box-shadow: 0 2px 4px rgba(17, 164, 255, 0.988);
+    animation: ease-in;
+  
+  }
+  .experi:hover{
+    background-color: #333;
+    color: var(white);
+    /* cursor: pointer; */
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+  
+  .experi:last-child {
+    margin-right: 0;
+  }
+
+  
+  .experi p {
+    margin: 0 16px 16px;
+
+  }
+  
+  .experi .certurl {
+    color: #333;
+    font-weight: bold;
+
+  }
+  .experi a{
+    background: #5dabff;
+    color: white;
+    padding: 15px 15px;
+    display: block;
+    text-align: center;
+    margin: 20px 80px;
+    border-radius: 10px;
+
+  }
+
+
+  .card-heading {
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0.3px solid rgba(68, 92, 107, 0.988);
+    box-shadow: 0 2px 4px rgba(57, 115, 152, 0.988);
+    border-radius: 10px;
+  }
+  .align{
+    display: flex;
+  }
+  .exp{
+    font-size: 12px;
+  }
+
+
+
+  
