@@ -15,7 +15,7 @@ const About = ({ fileUrl, fileName }) => {
           .then(blob => {
             const url = window.URL.createObjectURL(new Blob([blob]));
             const a = document.createElement('a');
-            a.href = 'https://github.com/sushil7397/Portfolio/files/12447461/Sushil.Yadav.pdf';
+            a.href = 'https://github.com/sushil7397/Portfolio/files/12682694/Sushil.Yadav.pdf';
             a.download = 'CV.pdf';
             a.click();
             window.URL.revokeObjectURL(url);
