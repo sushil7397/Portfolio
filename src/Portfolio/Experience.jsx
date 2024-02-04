@@ -41,9 +41,6 @@ const experience = () => {
           </div>
         ))}
       </div>
-
-
-
       </section>
 
   );

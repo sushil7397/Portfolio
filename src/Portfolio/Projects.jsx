@@ -200,7 +200,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      
         <h3 style={containerStyle2} className="projecth3"><img style={imgstyle} src={wordpress} alt="" srcset="" /> Wordpress Design</h3>
         
         <div className="skills"> 
