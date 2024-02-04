@@ -55,6 +55,51 @@ export default function Projects() {
     },
   ];
 
+  const officeproject = [
+    {
+      id: 1,
+      title: "Peeredge/Organic_data",
+      description: "Developed the Organic_data Django app for efficient Call Detail Record (CDR) management. Featuring a comprehensive model with 74 fields, the app includes an enhanced admin class for advanced functionalities such as date filtering and revenue report generation. Integrated seamlessly into the CRM admin department, it manages customer and vendor revenue data effectively. The implementation of six scripts facilitates precise six-hour interval data retrieval, optimizing data organization. Automated scripts handle over 3 crore daily entries, ensuring optimal database performance through scheduled data purging. The app provides a user-friendly interface for CRM admins, facilitating seamless revenue tracking. Overall, the project demonstrates expertise in Django development, database optimization, and automation for a CDR management system",
+      Duration: "Dec 2023 to Present",
+      // githubLink: "https://github.com/sushil7397/Employee_management_system",
+    },
+    {
+      id: 2,
+      title: "Decoder",
+      description: "This Django-based web application allows users to upload Stir/Shaken files containing URLs pointing to digital certificates. The backend processes these files, downloading certificates, and extracting relevant information like common name, organization, and validity dates. It then writes this data to both a CSV file and a Django database. The application provides a simple front end for file uploads and displays success messages upon completion. Additionally, the project includes functionality to avoid duplicate entries in the database. The architecture promotes certificate transparency and serves as a comprehensive solution for managing and analyzing digital.",
+      Duration: "Oct 2023 to Dec 2023",
+      // githubLink: "https://github.com/sushil7397/Voice-Based-Tours_and_Travel",
+    },
+    {
+      id: 3,
+      title: "MediaIps",
+      description: "This Django project focuses on IP address analysis and risk assessment. It integrates with the Scamalytics API to determine the risk status of IPs and stores this information in a PostgreSQL database. The application includes features such as uploading CSV files containing IP addresses, updating the database with new IPs, and displaying IP-related data with risk statuses. The system supports user authentication, file management, and offers search functionalities based on IP addresses and upload dates. The code emphasizes modularity and follows best practices for handling database interactions and API calls. The project serves as a comprehensive tool for IP risk monitoring and analysis.",
+      Duration: "Oct 2022 to Jul 2022 ",
+      // githubLink: "https://github.com/sushil7397/Pacman_Game",
+    },
+    {
+      id: 4,
+      title: "CRM",
+      description: "This comprehensive CRM system, built with Django, caters to sales, account, web, and business intelligence departments. Key features include user authentication, role-based access, and separate apps for modularity. Sales Department: Updates sales progress and partner information. Processes CSV files to import lead data. Implements web scraping for data retrieval. Account Department: Allows admin and account logins with role-based redirection. Uploads and stores financial data CSV files. Tracks attendance for departmental users. Web Department: Supports user registration and login. Provides forms for submitting web-related data. Implements date-filtered views for data analysis. Allows users to store web admin information. BI Department: Handles CSV file uploads for lead data. Ensures duplicate entry handling and integrity logging. Offers views with date filtering for leads data.",
+      Duration: "Sept 2023 to Present",
+      // githubLink: "https://github.com/sushil7397/Tracking-charity-donation-using-blockchain",
+    },
+    {
+      id: 5,
+      title: "Speech to text",
+      description: "This application utilizes Python and Django to transcribe audio from a given URL into text, detect its language, and provide translation. It downloads the audio file, converts it to a temporary WAV file, and uses Google Speech Recognition for transcription. The detected language is identified using the langdetect library, and the text is then translated into the detected language. The processed data, including MFCCs (Mel Frequency Cepstral Coefficients), is stored in a Django model called Transcription, which also handles saving the audio file. The application seamlessly combines audio processing, language detection, and translation,  and storing transcribed content.",
+      Duration: "Oct 2023 to Dec 2023",
+      // githubLink: "https://github.com/sushil7397/React-Password-Generator",
+    },
+    {
+      id: 6,
+      title: "Leads Web Application",
+      description: "This Django project empowers efficient lead management and analysis. It provides a secure user authentication system with login/logout functionalities. Users, including superusers, can upload CSV files containing extensive leads data, which is then processed and stored in the leads file model. The view feature allows users to paginate through the lead data, providing an organized and accessible interface. Additionally, users can delete uploaded CSV files, and error messages offer informative feedback on form input or processing challenges. ",
+      Duration: "Oct 2023 to Nov 2023 ",
+      // githubLink: "https://github.com/sushil7397/Web-ChatApp",
+    },
+  ];
+
   const [expandedIds, setExpandedIds] = useState([]);
 
   const toggleExpand = (projectId) => {
@@ -78,40 +123,6 @@ export default function Projects() {
     return text;
   };
 
-  const graphic=[
-    {name:'Apple logo', link:'https://drive.google.com/file/d/1TgSrqb_UJfkIoJFnp61KF0J0efmT8Lhc/'},
-    {name:'Blending design', link:'https://drive.google.com/file/d/1JI-soksyTuVw2rApZXkSK3AdoJQiYoGV/'},
-    {name:'Interlock design', link:'https://drive.google.com/file/d/1v-JpGHd-DKbTsKqoPeTyj5m3g5I2NV1n/'},
-    {name:'Disk Logo', link:'https://drive.google.com/file/d/1XoZJBvf-Zjc0xiiDj1o-mL5DScb29Cq4/'},
-    {name:'view design', link:'https://drive.google.com/file/d/1A7agPfsvVancx1HmKR9vXWV6oTgrlETd/'},
-    {name:'logo design', link:'https://drive.google.com/file/d/1Q4B5z53Igjdb7n3qKLXQ9CLdPuKYdAzj/'},
-    {name:'Ring design', link:'https://drive.google.com/file/d/1zYDbVvzLugP146FzDbN6pzotbto4SWvr/'},
-    {name:'Figma design', link:'https://drive.google.com/file/d/1992h7LNCAYGg7DNklm4_2cWupFuyCBcf/'},
-  ];
-  const photoshop=[
-    {name:'H Character', link:'https://drive.google.com/file/d/1KoBAAeFr0KNkPcRBrARZSDgsmz5ZF8MP/view?usp=drive_link'}, 
-    {name:'Branding Logo', link:'https://drive.google.com/file/d/1oPYiJANhMvVKuPZHN0vHVIMFFbS2nm5c/view?usp=drive_link'},
-    {name:'Houseware logo', link:'https://drive.google.com/file/d/1arDUvPgM6_3fvPnpuZXNOsfy6IkueeQQ/view?usp=drive_link'},
-    {name:'Banner Design', link:'https://drive.google.com/file/d/1EqzxfKqaMSzRZU_VxVCmqL9H1nkHzZfD/view?usp=drive_link'},
-    {name:'CH Letter', link:'https://drive.google.com/file/d/1u3qDW9jVyWWtyphMPulwVaSxoEp9TN4j/view?usp=drive_link'},
-    // {name:'Promotion1', link:'https://drive.google.com/file/d/1me7JMdL3VwZRC1nCWCT_OZe3uMJPUUa9/'},
-    // {name:'Get Started', link:'https://drive.google.com/file/d/1gtXi_O16UHjG6wCNNErJDZl2truUG6xR/'},
-  ];
-  const editing=[
-    {name:'Business Promotion', link:'https://drive.google.com/file/d/1nDP8y56LWsBQ7u3fPqhFdVTl3LJmRys_/'}, 
-    {name:'Promote', link:'https://drive.google.com/file/d/1gHtgd-xuSZqrXidWYoOjKiHuH2XE208v/'},
-    {name:'Startup Promotion', link:'https://drive.google.com/file/d/1tGvMfy3VT8tRheXkUdLNvFl6vrxVhFMB/'},
-    {name:'Template', link:'https://drive.google.com/file/d/1bkBJcj0xk1A_QxEHxjva7R0a1ruMdq_B/'},
-    {name:'InstaPost', link:'https://drive.google.com/file/d/1XBzX7jKS-x1MWm4jIIgrWbdKgzAqnxYA/'},
-    {name:'Promotion', link:'https://drive.google.com/file/d/1Y87UHSRGpRYEyVRXExVleLJ-d4tHmtXj/'},
-    {name:'Promotion1', link:'https://drive.google.com/file/d/1me7JMdL3VwZRC1nCWCT_OZe3uMJPUUa9/'},
-    {name:'Get Started', link:'https://drive.google.com/file/d/1gtXi_O16UHjG6wCNNErJDZl2truUG6xR/'},
-    {name:'Chhole Bhature Ads', link:'https://drive.google.com/file/d/1VHvXzWSnN0saiRST-i41QpRDFvtgaZUs/'},
-
-  ];
-  const containerStyle = {
-    marginTop: '100px',
-  };
   const imgstyle={
     width:'50px',
     paddingRight:'10px',
@@ -123,13 +134,11 @@ export default function Projects() {
     fontsize:'2rem',
     placeContent: 'center'
   };
-  
-
-
+ 
   return (
     <section id="Projects">
       <div className="projecthead">
-        <h2 className="projecth2">Projects</h2> 
+        <h2 className="projecth2">Academic Projects</h2> 
         <h3 className="projecth3">Web Developer</h3>
 
       </div>
@@ -157,59 +166,40 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <h3 style={containerStyle} className="projecth3">Graphic Designing</h3>
-      <div class="skills"> 
-        <div className="frontend card-heading">
-        <div className="TabHeading"> Illustrator</div>
-          <div className="cardskill">
-              {graphic.map(design=>(
-                <div className="design-button">
-                  <div className="align-center">
-                      <a target='_blank' rel="noreferrer" href={design.link}>
-                        <div className="skill-name">
-                        <span class="skillhead">{design.name}</span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  ))}
-          </div>
-        </div>
-        <div className="frontend card-heading">
-          <div className="TabHeading"> Photoshop</div>
-            <div className="cardskill">
-                {photoshop.map(design=>(
-                  <div className="design-button">
-                    <div className="align-center">
-                        <a target='_blank' rel="noreferrer" href={design.link}>
-                          <div className="skill-name">
-                          <span class="skillhead">{design.name}</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    ))}
-            </div>
-          </div>
-        <div className="frontend card-heading">
-          <div className="TabHeading"> Canva</div>
-            <div className="cardskill">
-                {editing.map(design=>(
-                  <div className="design-button">
-                    <div className="align-center">
-                        <a target='_blank' rel="noreferrer" href={design.link}>
-                          <div className="skill-name">
-                          <span class="skillhead">{design.name}</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    ))}
-            </div>
-        </div>
+      <br />
+      <br />
+      <br />
+      <br />
 
-        
-        </div>
+      <div className="projecthead">
+        <h2 className="projecth2">Professional Experience</h2> 
+        <h3 className="projecth3">Full Stack Developer</h3>
+
+      </div>
+      <div className="cards" >
+        {officeproject.map((project) => (
+          <div style={{ color: 'black' }} className="card" key={project.id}>
+            <h3 style={{ textAlign: "justify" }} className="card-title">{project.title}</h3>
+            <p  className="card-description">
+              {getShortenedText(project.description, project.id)}
+              {project.description.length > 200 && (
+                <button
+                  onClick={() => toggleExpand(project.id)}
+                  className="read-more-button"
+                >
+                  {isExpanded(project.id) ? "Read Less" : "Read More"}
+                </button>
+              )}
+            </p>
+            <p>Duration: {project.Duration}</p>
+            {/* <p>
+              <a href={project.githubLink}>
+                GitHub
+              </a>
+            </p> */}
+          </div>
+        ))}
+      </div>
       
         <h3 style={containerStyle2} className="projecth3"><img style={imgstyle} src={wordpress} alt="" srcset="" /> Wordpress Design</h3>
         
@@ -220,11 +210,7 @@ export default function Projects() {
                   <source src={vid1} type="video/mp4"/>
             </Video>
           </div>
-
-        
         </div>
-
-        
     </section>
 
   );
