@@ -12,7 +12,7 @@ const Home = () => {
           <h1>I'm <div className="name">&nbsp;&nbsp;Sushil</div></h1>
           <div className="home">
             <p>
-            I am a recent graduate from St. John College of Engineering and Management (Palghar) with a Bachelor of Engineering degree. 
+            As an experienced computer engineer with significant corporate expertise, I'm searching for an exciting opportunity in a well-known organization. My objective is straightforward but aspirational: to share my knowledge, keep learning, and leave a lasting impression on the organization's path to success. I have the dependability and growth-oriented mindset necessary to succeed in a fast-paced workplace. 
             </p>
             
             <div className="tags">

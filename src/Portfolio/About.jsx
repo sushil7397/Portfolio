@@ -39,7 +39,7 @@ const About = ({ fileUrl, fileName }) => {
                     <div className="field">
                         <FontAwesomeIcon className='icon' icon={faAward} />
                         Experience
-                    <p className='fieldp'>Fresher</p>
+                    <p className='fieldp'>5 Month</p>
                     </div>
                     <div className="field">
                         
