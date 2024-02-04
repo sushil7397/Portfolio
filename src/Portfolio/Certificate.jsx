@@ -55,11 +55,11 @@ const frontend=[
   {skill:"React Js",experience:'Intermediate'},{skill:"HTML",experience:'Adavance'},{skill:"CSS",experience:'Adavance'},{skill:"JavaScript",experience:'Intermediate'},
 ];
 const backend=[
-  {skill:"MySQL",experience:'Intermediate'},{skill:"DJango",experience:'Intermediate'},{skill:"Tableau",experience:'Beginner'},{skill:"Python",experience:'Intermediate'},{skill:"MongoDB",experience:'Beginner'},{skill:"Java",experience:'Intermediate'},
+  {skill:"PostgreSQL",experience:'Intermediate'},{skill:"DJango",experience:'Intermediate'},{skill:"Tableau",experience:'Beginner'},{skill:"Python",experience:'Intermediate'},{skill:"MongoDB",experience:'Beginner'},{skill:"Java",experience:'Intermediate'},
 ];
 
 const other=[
-  {skill:"Web Developer",experience:'Intermediate'},{skill:"OOPS",experience:'Intermediate'},{skill:"Editing",experience:'Intermediate'},{skill:"Documentation",experience:'Advance'}
+  {skill:"Web Developer",experience:'Intermediate'},{skill:"OOPS",experience:'Intermediate'},{skill:"Editing",experience:'Intermediate'},{skill:"Documentation",experience:'Advance'},{skill:"Ubuntu",experience:'Intermediate'},{skill:"Nohup",experience:'Intermediate'},{skill:"Cronjob",experience:'Intermediate'}
 ];
 
   return (
