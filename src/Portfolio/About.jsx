@@ -46,7 +46,7 @@ const About = ({ fileUrl, fileName }) => {
                         <FontAwesomeIcon icon={faBriefcase} />
 
                         Project
-                    <p className='fieldp'>6+ projects</p>
+                    <p className='fieldp'>12+ projects</p>
                     </div>
                     <div className="field">
                         <FontAwesomeIcon icon={faArchive} />
