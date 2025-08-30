@@ -1,0 +1,113 @@
+
+@import url(font.css);
+
+
+:root{
+    --text-gray:#2c3e50;
+    --text-light:#7f8c8d;
+    --midnight:#1a252f;
+    --bg-color:#0f1419;
+    --white:#ffffff;
+    --primary-blue:#2c3e50;
+    --accent-teal:#16a085;
+    --light-gray:#ecf0f1;
+    --dark-navy:#1a252f;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-accent: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
+    --lexend:'Lexend',cursive;
+    --Anton:'Anton',cursive;
+    --Abel:'Abel',cursive;
+}
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+}
+.CertHead{
+  text-align: center;
+}
+.Certh3{
+  font-size: 2rem;
+}
+.Certh4{
+  font-size: 1rem;
+  color: #e2dada;
+
+}
+.certs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    justify-content: center;   
+  }
+
+  .experi {
+    width: 420px;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1rem;
+    background: rgba(44, 62, 80, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(22, 160, 133, 0.3);
+    box-shadow: 0 8px 32px rgba(22, 160, 133, 0.2);
+    transition: all 0.3s ease;
+  }
+  .experi:hover{
+    background: rgba(22, 160, 133, 0.15);
+    border-color: var(--accent-teal);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(22, 160, 133, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .experi:last-child {
+    margin-right: 0;
+  }
+
+  
+  .experi p {
+    margin: 0 16px 16px;
+
+  }
+  
+  .experi .certurl {
+    color: #333;
+    font-weight: bold;
+
+  }
+  .experi a{
+    background: var(--gradient-accent);
+    color: var(--white);
+    padding: 12px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 60px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+  }
+
+
+  .card-heading {
+    background: rgba(44, 62, 80, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    margin-bottom: 10px;
+    border: 2px solid rgba(22, 160, 133, 0.3);
+    box-shadow: 0 8px 25px rgba(22, 160, 133, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  .align{
+    display: flex;
+  }
+  .exp{
+    font-size: 12px;
+  }
+
+
+
+  

@@ -1,0 +1,170 @@
+@import url(font.css);
+
+:root {
+  --text-gray: #2c3e50;
+  --text-light: #7f8c8d;
+  --midnight: #1a252f;
+  --bg-color: #0f1419;
+  --white: #ffffff;
+  --primary-blue: #2c3e50;
+  --accent-teal: #16a085;
+  --light-gray: #ecf0f1;
+  --dark-navy: #1a252f;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
+  --lexend: 'Lexend', cursive;
+  --Anton: 'Anton', cursive;
+  --Abel: 'Abel', cursive;
+}
+
+.aboutHead {
+  margin-top: 8rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.intro {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.Aboutsection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
+.aboutimg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 2rem;
+  margin: 2rem 0;
+}
+
+.sidesection {
+  margin: 0 2rem;
+}
+
+.Cardfield {
+  display: flex;
+  padding-top: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  margin: 1rem;
+  width: 10rem;
+  border: 2px solid var(--accent-teal);
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(22, 160, 133, 0.2);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(22, 160, 133, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.fieldp {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+.PDesc {
+  width: 100%;
+  max-width: 700px;
+  font-size: 1rem;
+  color: var(--white);
+  padding: 20px;
+  text-align: justify;
+}
+
+.buttonStyle {
+  background: var(--gradient-accent);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 1.2rem;
+  border: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+}
+
+.buttonLink {
+  color: var(--white);
+  font-size: 1rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1080px) {
+  .aboutimg {
+    max-width: 60%;
+    margin: 2rem auto;
+  }
+
+  .sidesection {
+    margin: 0;
+  }
+
+  .PDesc {
+    padding: 10px;
+  }
+
+  .buttonStyle {
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHead {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+  }
+
+  .aboutimg {
+    margin: 1rem auto;
+  }
+
+  .sidesection {
+    margin: 0;
+  }
+
+  .field {
+    margin: 0.5rem;
+  }
+
+  .PDesc {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .buttonStyle {
+    margin: 1.5rem auto;
+  }
+}
