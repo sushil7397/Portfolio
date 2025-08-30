@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.7bbc47d4.css",
-    "main.js": "/Portfolio/static/js/main.2b5e9b94.js",
+    "main.js": "/Portfolio/static/js/main.a1700244.js",
     "static/media/SportsPromo.mp4": "/Portfolio/static/media/SportsPromo.6a1553983a596b355c87.mp4",
     "static/media/wordpress.png": "/Portfolio/static/media/wordpress.8be7749da6c714d49c9d.png",
     "static/media/blob.png": "/Portfolio/static/media/blob.482eca6230b963e5f3e8.png",
@@ -13,10 +13,10 @@
     "static/media/logo.png": "/Portfolio/static/media/logo.7260ce09edecf7794d52.png",
     "index.html": "/Portfolio/index.html",
     "main.7bbc47d4.css.map": "/Portfolio/static/css/main.7bbc47d4.css.map",
-    "main.2b5e9b94.js.map": "/Portfolio/static/js/main.2b5e9b94.js.map"
+    "main.a1700244.js.map": "/Portfolio/static/js/main.a1700244.js.map"
   },
   "entrypoints": [
     "static/css/main.7bbc47d4.css",
-    "static/js/main.2b5e9b94.js"
+    "static/js/main.a1700244.js"
   ]
 }
