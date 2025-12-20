@@ -32,7 +32,7 @@ ul{
 
 
 .nav-link:hover a{
-    color: #07b0d2;
+    color: var(--accent-color);
 }
 .nav-items{
     display: flex;
@@ -41,11 +41,14 @@ ul{
 }
 
 .nav{
-    padding:0 2rem ;
-    height: 7rem;
+    padding:0 1.5rem ;
+    height: 4.5rem;
     min-height: 0vh;
     overflow: hidden;
     transition: 1s;
+    background: linear-gradient(135deg, #0f172a 0%, #0a2540 100%);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
  .nav-menu{
     justify-content: space-between;
@@ -67,12 +70,12 @@ ul{
     color: var(--white);
     display: flex;
     justify-content: flex-end;
-    padding-top: 1.7rem;
+    padding-top: 1.2rem;
     margin-left: auto;
 
 }
 img.logo{
-	width: 130px;
+	width: 110px;
     font-family:var(--lexend);
 	display: block;
     font-size: 1.6rem;

@@ -136,14 +136,7 @@ export default function Projects() {
 
   const isExpanded = (projectId) => expandedIds.includes(projectId);
 
-  const getShortenedText = (text, projectId) => {
-    if (isExpanded(projectId) || text.length <= 210) {
-      return text;
-    }
-    if (text.length > 210) {
-      return text.slice(0, 210) + "...";
-    }
-
+  const getShortenedText = (text) => {
     return text;
   };
 
@@ -171,7 +164,9 @@ export default function Projects() {
           <div style={{ color: 'black' }} className="card" key={project.id}>
             <h3 style={{ textAlign: "justify" }} className="card-title">{project.title}</h3>
             <p  className="card-description">
-              {getShortenedText(project.description, project.id)}
+              <span className={`card-description-text ${isExpanded(project.id) ? 'expanded' : ''}`}>
+                {getShortenedText(project.description)}
+              </span>
               {project.description.length > 200 && (
                 <button
                   onClick={() => toggleExpand(project.id)}
@@ -205,7 +200,9 @@ export default function Projects() {
           <div style={{ color: 'black' }} className="card" key={project.id}>
             <h3 style={{ textAlign: "justify" }} className="card-title">{project.title}</h3>
             <p  className="card-description">
-              {getShortenedText(project.description, project.id)}
+              <span className={`card-description-text ${isExpanded(project.id) ? 'expanded' : ''}`}>
+                {getShortenedText(project.description)}
+              </span>
               {project.description.length > 200 && (
                 <button
                   onClick={() => toggleExpand(project.id)}

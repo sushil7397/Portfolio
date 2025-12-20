@@ -3,26 +3,26 @@
 
 
 :root{
-    --text-gray:#2c3e50;
-    --text-light:#7f8c8d;
-    --midnight:#1a252f;
-    --bg-color:#0f1419;
+    --text-gray:#cbd5e1;
+    --text-light:#94a3b8;
+    --midnight:#0f172a;
+    --bg-color:#0b0f14;
     --white:#ffffff;
-    --primary-blue:#2c3e50;
-    --accent-teal:#16a085;
-    --light-gray:#ecf0f1;
-    --dark-navy:#1a252f;
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-accent: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
-    --lexend:'Lexend',cursive;
+    --primary-blue:#1e3a8a;
+    --accent-teal:#3b82f6;
+    --light-gray:#e5e7eb;
+    --dark-navy:#0f172a;
+    --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
+    --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
+    --lexend:'lexend',sans-serif;
     --Anton:'Anton',cursive;
     --Abel:'Abel',cursive;
 }
 
 
 body{
-   background-color: #0f1419;
-   background-image: linear-gradient(135deg, #0f1419 0%, #1a252f 50%, #2c3e50 100%);
+   background-color: #0b0f14;
+   background-image: linear-gradient(135deg, #0b0f14 0%, #121826 50%, #1f2937 100%);
    min-height: 100vh;
 }
 section{
@@ -76,7 +76,7 @@ hr{
     margin-left: 40rem;
     margin-right: 6rem;
     background-image: var(--gradient-accent);
-    box-shadow: 0 2px 8px rgba(22, 160, 133, 0.4);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
 .picture img{
     position: relative;
@@ -95,12 +95,12 @@ hr{
     border-radius: 8px;
     color: var(--white);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 .tags:hover i{
     cursor: pointer;
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(22, 160, 133, 0.4);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .home p{
@@ -132,7 +132,7 @@ hr{
 }
 .name-about h1 .name{
    color: var(--accent-teal);
-   text-shadow: 0 2px 4px rgba(22, 160, 133, 0.3);
+   text-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
 
 @media (max-width:1080px){
