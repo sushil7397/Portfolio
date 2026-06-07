@@ -1,238 +1,272 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef } from "react";
 import "../Style/CSS/project.css";
-import '../Style/CSS/experience.css'
-import wordpress from '../Style/wordpress.png'
-import {DefaultPlayer as Video} from 'react-html5video'
-import 'react-html5video/dist/styles.css'
-import thum from '../Style/tumb.png'
-import vid1 from '../Style/SportsPromo.mp4'
+import '../Style/CSS/experience.css';
+import wordpress from '../Style/wordpress.png';
+import { DefaultPlayer as Video } from 'react-html5video';
+import 'react-html5video/dist/styles.css';
+import thum from '../Style/tumb.png';
+import vid1 from '../Style/SportsPromo.mp4';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faArrowUpRightFromSquare, faClock, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Projects() {
 
   const projects = [
     {
       id: 1,
-      title: "Employee management system",
-      description: "Employee management is comprehensive and user-friendly application-based system designed to handle various aspects of employee management. It comprises two interconnected applications: one for employers to manage employee details and another for employees to mark attendance. It optimizes operations by securely storing and managing crucial employee data, fostering communication and coordination, and facilitating effective decision-making.",
-      Duration: "Feb 2020 to Jan 2021",
+      title: "Employee Management System",
+      description: "A comprehensive application-based system designed to handle various aspects of employee management. It comprises two interconnected applications: one for employers to manage employee details and another for employees to mark attendance. It optimizes operations by securely storing and managing crucial employee data.",
+      Duration: "Feb 2020 - Jan 2021",
+      techStack: ["Java", "MySQL", "JDBC"],
       githubLink: "https://github.com/sushil7397/Employee_management_system",
     },
     {
       id: 2,
-      title: "Voice based system for tourism website",
-      description: "It is a voice-based tourism blogging website in which users can use voice commands to search for places and make quick decisions based on the shown results of famous places' images and reviews. The website is designed in such a way that users can easily navigate through any country, explore its cities, and search for the places they want to visit.",
-      Duration: "May 2021 to Oct 2021",
+      title: "Voice Based Tourism Website",
+      description: "A voice-based tourism blogging website where users can use voice commands to search for places and make quick decisions based on shown results of famous places' images and reviews. Users can navigate through any country, explore cities, and search for destinations.",
+      Duration: "May 2021 - Oct 2021",
+      techStack: ["Python", "Django", "Web Speech API"],
       githubLink: "https://github.com/sushil7397/Voice-Based-Tours_and_Travel",
     },
     {
       id: 3,
       title: "Pacman Game",
-      description: "Pacman is a classic arcade game that features Pacman navigating through a maze, eating pellets and avoiding ghosts. Power pellets can be collected to turn ghosts blue and eat them for extra points. The game has stood the test of time and remains a beloved classic in the gaming world.",
-      Duration: "Jan 2022 to Jul 2022 ",
+      description: "A classic arcade game featuring Pacman navigating through a maze, eating pellets and avoiding ghosts. Power pellets can be collected to turn ghosts blue and eat them for extra points. Built with modern web technologies for browser-based gameplay.",
+      Duration: "Jan 2022 - Jul 2022",
+      techStack: ["JavaScript", "HTML5 Canvas", "CSS"],
       githubLink: "https://github.com/sushil7397/Pacman_Game",
     },
     {
       id: 4,
-      title: " Tracking charity donations using blockchain",
-      description: "The development of a social network based on blockchain technology that can assist non-profit organizations is essential. All users of the platform will be able to view their accounts and an explanation of each donation made by the organization they support. Donors have every reason to fear that charitable funds will not reach people who really need them. The problem of mistrust of donors and overloading of funds can be solved by organizing an external database, records in which are recorded in the blockchain. Therefore, it is important to develop a social platform based on blockchain technology that can help non-profit organizations, foundations, volunteers, and social entrepreneurs in their work and make donation processes transparent and understandable for all parties. Blockchain will allow all users of the platform to see their accounts and a description of each payment of the organization it supports.",
-      Duration: "Apr 2022 to Mar 2023",
+      title: "Charity Donations via Blockchain",
+      description: "A social network based on blockchain technology to assist non-profit organizations. All users can view their accounts and descriptions of each donation. The platform makes donation processes transparent and understandable for all parties using blockchain ledger.",
+      Duration: "Apr 2022 - Mar 2023",
+      techStack: ["Solidity", "React", "Web3.js", "Ethereum"],
       githubLink: "https://github.com/sushil7397/Tracking-charity-donation-using-blockchain",
     },
     {
       id: 5,
-      title: "Password Generator using React",
-      description: "Password Generator is application developed using the React framework, designed to provide users with a convenient tool for generating random and secure passwords based on their specified settings. With customizable options such as password length and character types, the app allows users to create passwords tailored to their specific needs. Additionally, the inclusion of a password strength meter provides a valuable assessment of the generated passwords, empowering users to make informed decisions and contribute to a safer online environment by utilizing stronger and more resilient passwords.",
-      Duration: "Mar 2023 to May 2023",
+      title: "Password Generator",
+      description: "A React application designed to generate random and secure passwords based on user-specified settings. Features customizable password length, character types, and a password strength meter for informed security decisions.",
+      Duration: "Mar 2023 - May 2023",
+      techStack: ["React", "JavaScript", "CSS"],
       githubLink: "https://github.com/sushil7397/React-Password-Generator",
     },
     {
       id: 6,
-      title: "Web based chat application",
-      description: "A user-friendly, efficient chat platform connecting individuals across barriers. Seamlessly sign up, engage in real-time conversations, and foster energetic discussions. Perfect for personal and professional use, with multi-chatting features. Break barriers, foster connections – experience reliable and versatile messaging.",
-      Duration: "Dec 2022 to Aug 2023 ",
+      title: "Web Based Chat Application",
+      description: "A user-friendly, efficient chat platform connecting individuals across barriers. Features real-time conversations, multi-chatting capabilities, and seamless sign-up. Perfect for personal and professional use with reliable messaging.",
+      Duration: "Dec 2022 - Aug 2023",
+      techStack: ["React", "Node.js", "Socket.io", "MongoDB"],
       githubLink: "https://github.com/sushil7397/Web-ChatApp",
     },
   ];
 
   const officeproject = [
     {
-      id: 1,
+      id: "p1",
       title: "Page Speed Insight",
-      description: "Designed a Django-based automation system to analyze website performance using Google PageSpeed Insights API. Allowed CSV uploads of URLs, fetching mobile & desktop performance metrics, and storing results in PostgreSQL. Added cron jobs for periodic re-checks and automated email reporting. Built visualization dashboards and summary tables for proactive optimization. Optimized concurrency and transaction handling for efficient large-scale data processing.",
+      description: "Django-based automation system analyzing website performance using Google PageSpeed Insights API. Features CSV uploads, mobile & desktop metrics, PostgreSQL storage, cron jobs for re-checks, automated email reporting, and visualization dashboards.",
       Duration: "Apr 2024 - Jan 2025",
-      issuedBy: "Personal Project",
-      techStack: "HTML, CSS, PostgreSQL, Django Framework, PageSpeed Insights API"
+      techStack: ["Django", "PostgreSQL", "PageSpeed API"],
     },
     {
-      id: 2,
+      id: "p2",
       title: "Email Marketing Platform",
-      description: "Developed a full-stack email marketing solution with campaign scheduling (timezone-aware), SMTP integration, delivery tracking, and spam detection. Built a lead management module with CSV uploads, email validation, deduplication, and multi-layer spam filtering. Frontend built with React (TypeScript, TanStack Query, RHF + Zod, Tailwind, shadcn/ui) for responsive, accessible design. Backend with Node.js (Express + TypeScript), PostgreSQL (self-hosted, Drizzle ORM) provided a type-safe API layer. Added background campaign scheduler with pause/resume and real-time spam/domain validation.",
+      description: "Full-stack email marketing solution with campaign scheduling (timezone-aware), SMTP integration, delivery tracking, and spam detection. Built with React (TypeScript, TanStack Query, Tailwind) and Node.js (Express, PostgreSQL, Drizzle ORM).",
       Duration: "Jun 2025 - Aug 2025",
-      issuedBy: "Personal Project",
-      techStack: "PostgreSQL, React, Node.js, Express"
+      techStack: ["React", "Node.js", "PostgreSQL"],
     },
     {
-      id: 3,
+      id: "p3",
       title: "WordPress Plugin Development",
-      description: "Designed multiple WordPress plugins for telecom and security: Random Phone Number Generator – Generates numbers for 190 countries using ISO codes and number ranges. Phone Number Verifier – Detects real vs fake phone numbers. Phone Number Lookup – Retrieves details like country, provider, and validation status. Scamlytics Integration – Detects spam IPs, provides risk scores, and identifies IP locations. These plugins improved number validation workflows and security for WordPress sites.",
+      description: "Multiple WordPress plugins for telecom and security: Random Phone Number Generator for 190 countries, Phone Number Verifier, Lookup tool, and Scamlytics Integration for spam IP detection and risk scoring.",
       Duration: "2024 - Present",
-      issuedBy: "Personal Project",
-      techStack: "PHP, WordPress"
+      techStack: ["PHP", "WordPress"],
     },
     {
-      id: 4,
-      title: "Peeredge/Organic_data",
-      description: "Developed the Organic_data Django app for efficient Call Detail Record (CDR) management. Featuring a comprehensive model with 74 fields, the app includes an enhanced admin class for advanced functionalities such as date filtering and revenue report generation. Integrated seamlessly into the CRM admin department, it manages customer and vendor revenue data effectively. The implementation of six scripts facilitates precise six-hour interval data retrieval, optimizing data organization. Automated scripts handle over 3 crore daily entries, ensuring optimal database performance through scheduled data purging. The app provides a user-friendly interface for CRM admins, facilitating seamless revenue tracking. Overall, the project demonstrates expertise in Django development, database optimization, and automation for a CDR management system",
-      Duration: "Dec 2023 to Present",
-      // githubLink: "https://github.com/sushil7397/Employee_management_system",
+      id: "p4",
+      title: "Peeredge / Organic Data",
+      description: "Django app for efficient Call Detail Record (CDR) management with 74-field model, advanced admin filtering, revenue reports, and automated scripts handling 3 crore+ daily entries with scheduled data purging.",
+      Duration: "Dec 2023 - Present",
+      techStack: ["Django", "PostgreSQL", "Python"],
     },
     {
-      id: 5,
+      id: "p5",
       title: "Decoder",
-      description: "This Django-based web application allows users to upload Stir/Shaken files containing URLs pointing to digital certificates. The backend processes these files, downloading certificates, and extracting relevant information like common name, organization, and validity dates. It then writes this data to both a CSV file and a Django database. The application provides a simple front end for file uploads and displays success messages upon completion. Additionally, the project includes functionality to avoid duplicate entries in the database. The architecture promotes certificate transparency and serves as a comprehensive solution for managing and analyzing digital.",
-      Duration: "Oct 2023 to Dec 2023",
-      // githubLink: "https://github.com/sushil7397/Voice-Based-Tours_and_Travel",
+      description: "Django web application for processing Stir/Shaken files containing URLs to digital certificates. Downloads certificates, extracts information (common name, organization, validity), and stores data in CSV and database.",
+      Duration: "Oct 2023 - Dec 2023",
+      techStack: ["Django", "Python", "PostgreSQL"],
     },
     {
-      id: 6,
+      id: "p6",
       title: "MediaIps",
-      description: "This Django project focuses on IP address analysis and risk assessment. It integrates with the Scamalytics API to determine the risk status of IPs and stores this information in a PostgreSQL database. The application includes features such as uploading CSV files containing IP addresses, updating the database with new IPs, and displaying IP-related data with risk statuses. The system supports user authentication, file management, and offers search functionalities based on IP addresses and upload dates. The code emphasizes modularity and follows best practices for handling database interactions and API calls. The project serves as a comprehensive tool for IP risk monitoring and analysis.",
-      Duration: "Oct 2022 to Jul 2022 ",
-      // githubLink: "https://github.com/sushil7397/Pacman_Game",
+      description: "IP address analysis and risk assessment tool integrating with the Scamalytics API. Features CSV uploads, database updates, user authentication, and search functionalities based on IP addresses and upload dates.",
+      Duration: "Oct 2023 - Jul 2024",
+      techStack: ["Django", "PostgreSQL", "Scamalytics API"],
     },
     {
-      id: 7,
-      title: "CRM",
-      description: "This comprehensive CRM system, built with Django, caters to sales, account, web, and business intelligence departments. Key features include user authentication, role-based access, and separate apps for modularity. Sales Department: Updates sales progress and partner information. Processes CSV files to import lead data. Implements web scraping for data retrieval. Account Department: Allows admin and account logins with role-based redirection. Uploads and stores financial data CSV files. Tracks attendance for departmental users. Web Department: Supports user registration and login. Provides forms for submitting web-related data. Implements date-filtered views for data analysis. Allows users to store web admin information. BI Department: Handles CSV file uploads for lead data. Ensures duplicate entry handling and integrity logging. Offers views with date filtering for leads data.",
-      Duration: "Sept 2023 to Present",
-      // githubLink: "https://github.com/sushil7397/Tracking-charity-donation-using-blockchain",
+      id: "p7",
+      title: "CRM System",
+      description: "Comprehensive CRM system catering to sales, account, web, and BI departments. Features role-based access, CSV imports, web scraping, attendance tracking, date-filtered views, and duplicate handling.",
+      Duration: "Sept 2023 - Present",
+      techStack: ["Django", "PostgreSQL", "Python"],
     },
     {
-      id: 8,
-      title: "Speech to text",
-      description: "This application utilizes Python and Django to transcribe audio from a given URL into text, detect its language, and provide translation. It downloads the audio file, converts it to a temporary WAV file, and uses Google Speech Recognition for transcription. The detected language is identified using the langdetect library, and the text is then translated into the detected language. The processed data, including MFCCs (Mel Frequency Cepstral Coefficients), is stored in a Django model called Transcription, which also handles saving the audio file. The application seamlessly combines audio processing, language detection, and translation,  and storing transcribed content.",
-      Duration: "Oct 2023 to Dec 2023",
-      // githubLink: "https://github.com/sushil7397/React-Password-Generator",
+      id: "p8",
+      title: "Speech to Text",
+      description: "Application utilizing Python and Django to transcribe audio from URLs into text, detect language using langdetect, and provide translation. Processes MFCCs and stores transcribed content in Django models.",
+      Duration: "Oct 2023 - Dec 2023",
+      techStack: ["Django", "Python", "Speech API"],
     },
     {
-      id: 9,
+      id: "p9",
       title: "Leads Web Application",
-      description: "This Django project empowers efficient lead management and analysis. It provides a secure user authentication system with login/logout functionalities. Users, including superusers, can upload CSV files containing extensive leads data, which is then processed and stored in the leads file model. The view feature allows users to paginate through the lead data, providing an organized and accessible interface. Additionally, users can delete uploaded CSV files, and error messages offer informative feedback on form input or processing challenges. ",
-      Duration: "Oct 2023 to Nov 2023 ",
-      // githubLink: "https://github.com/sushil7397/Web-ChatApp",
+      description: "Django project for efficient lead management with secure authentication, CSV uploads, paginated data views, file deletion, and comprehensive error handling for form processing.",
+      Duration: "Oct 2023 - Nov 2023",
+      techStack: ["Django", "PostgreSQL", "Python"],
     },
   ];
 
-  const [expandedIds, setExpandedIds] = useState([]);
+  const academicSliderRef = useRef(null);
+  const proSliderRef = useRef(null);
 
-  const toggleExpand = (projectId) => {
-    setExpandedIds((prevIds) =>
-      prevIds.includes(projectId)
-        ? prevIds.filter((id) => id !== projectId)
-        : [...prevIds, projectId]
-    );
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    arrows: false,
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } }
+    ]
   };
 
-  const isExpanded = (projectId) => expandedIds.includes(projectId);
-
-  const getShortenedText = (text) => {
-    return text;
+  const proSliderSettings = {
+    ...sliderSettings,
+    autoplaySpeed: 3500,
   };
 
-  const imgstyle={
-    width:'50px',
-    paddingRight:'10px',
-  }
-  const containerStyle2 = {
-    marginTop: '100px', 
-    display: 'flex',
-    alignItems: 'center',
-    fontsize:'2rem',
-    placeContent: 'center'
-  };
- 
   return (
     <section id="Projects">
-      <div className="projecthead">
-        <h2 className="projecth2">Academic Projects</h2> 
-        <h3 className="projecth3">Web Developer</h3>
-
+      {/* Academic Projects Carousel */}
+      <div className="section-header">
+        <span className="section-label">Portfolio</span>
+        <h2 className="section-title">Academic Projects</h2>
+        <p className="section-subtitle">Web Developer</p>
+        <div className="carousel-nav">
+          <button className="carousel-btn" onClick={() => academicSliderRef.current?.slickPrev()} aria-label="Previous slide">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button className="carousel-btn" onClick={() => academicSliderRef.current?.slickNext()} aria-label="Next slide">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
       </div>
-      <div className="cards" >
-        {projects.map((project) => (
-          <div style={{ color: 'black' }} className="card" key={project.id}>
-            <h3 style={{ textAlign: "justify" }} className="card-title">{project.title}</h3>
-            <p  className="card-description">
-              <span className={`card-description-text ${isExpanded(project.id) ? 'expanded' : ''}`}>
-                {getShortenedText(project.description)}
-              </span>
-              {project.description.length > 200 && (
-                <button
-                  onClick={() => toggleExpand(project.id)}
-                  className="read-more-button"
-                >
-                  {isExpanded(project.id) ? "Read Less" : "Read More"}
-                </button>
-              )}
-            </p>
-            <p>Duration: {project.Duration}</p>
-            <p>
-              <a href={project.githubLink}>
-                GitHub
-              </a>
-            </p>
+
+      <div className="carousel-container">
+        <Slider ref={academicSliderRef} {...sliderSettings}>
+          {projects.map((project) => (
+            <div className="carousel-slide" key={project.id}>
+              <div className="project-card">
+                <div className="project-card-number">{String(project.id).padStart(2, '0')}</div>
+                <h3 className="project-card-title">{project.title}</h3>
+                <p className="project-card-desc">{project.description}</p>
+                <div className="project-card-tech">
+                  {project.techStack.map((tech, i) => (
+                    <span className="tech-tag" key={i}>{tech}</span>
+                  ))}
+                </div>
+                <div className="project-card-footer">
+                  <span className="project-duration">
+                    <FontAwesomeIcon icon={faClock} /> {project.Duration}
+                  </span>
+                  <a href={project.githubLink} target="_blank" rel="noreferrer" className="project-github-link">
+                    <FontAwesomeIcon icon={faGithub} /> GitHub
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="link-arrow" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Professional Projects Carousel */}
+      <div className="section-header" style={{ marginTop: '6rem' }}>
+        <span className="section-label">Experience</span>
+        <h2 className="section-title">Professional Projects</h2>
+        <p className="section-subtitle">Full Stack Developer</p>
+        <div className="carousel-nav">
+          <button className="carousel-btn" onClick={() => proSliderRef.current?.slickPrev()} aria-label="Previous slide">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button className="carousel-btn" onClick={() => proSliderRef.current?.slickNext()} aria-label="Next slide">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+      </div>
+
+      <div className="carousel-container">
+        <Slider ref={proSliderRef} {...proSliderSettings}>
+          {officeproject.map((project) => (
+            <div className="carousel-slide" key={project.id}>
+              <div className="project-card pro-project-card">
+                <div className="pro-card-badge">
+                  <FontAwesomeIcon icon={faCode} /> Professional
+                </div>
+                <h3 className="project-card-title">{project.title}</h3>
+                <p className="project-card-desc">{project.description}</p>
+                <div className="project-card-tech">
+                  {project.techStack.map((tech, i) => (
+                    <span className="tech-tag" key={i}>{tech}</span>
+                  ))}
+                </div>
+                <div className="project-card-footer">
+                  <span className="project-duration">
+                    <FontAwesomeIcon icon={faClock} /> {project.Duration}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* WordPress Section */}
+      <div className="section-header" style={{ marginTop: '6rem' }}>
+        <span className="section-label">Design</span>
+        <h2 className="section-title">
+          <img style={{ width: '40px', marginRight: '10px', verticalAlign: 'middle' }} src={wordpress} alt="WordPress" />
+          WordPress Design
+        </h2>
+      </div>
+
+      <div className="wordpress-showcase">
+        <div className="wordpress-card">
+          <div className="wordpress-card-header">
+            <span className="wp-badge">Live Project</span>
+            <h3>Sports Club</h3>
           </div>
-        ))}
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <div className="projecthead">
-        <h2 className="projecth2">Professional Experience</h2> 
-        <h3 className="projecth3">Full Stack Developer</h3>
-
-      </div>
-      <div className="cards" >
-        {officeproject.map((project) => (
-          <div style={{ color: 'black' }} className="card" key={project.id}>
-            <h3 style={{ textAlign: "justify" }} className="card-title">{project.title}</h3>
-            <p  className="card-description">
-              <span className={`card-description-text ${isExpanded(project.id) ? 'expanded' : ''}`}>
-                {getShortenedText(project.description)}
-              </span>
-              {project.description.length > 200 && (
-                <button
-                  onClick={() => toggleExpand(project.id)}
-                  className="read-more-button"
-                >
-                  {isExpanded(project.id) ? "Read Less" : "Read More"}
-                </button>
-              )}
-            </p>
-            <p>Duration: {project.Duration}</p>
-            {/* <p>
-              <a href={project.githubLink}>
-                GitHub
-              </a>
-            </p> */}
-          </div>
-        ))}
-      </div>
-        <h3 style={containerStyle2} className="projecth3"><img style={imgstyle} src={wordpress} alt="" srcSet="" /> Wordpress Design</h3>
-        
-        <div className="skills"> 
-        <div style={{width:'500px'}} className="frontend1 card-heading">
-          <div className="TabHeading"> Sports Club &nbsp;&nbsp;<a style={{background:'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(138,138,205,0.5999649859943977) 0%, rgba(0,212,255,1) 100%)', border: 'none',borderRadius:'1rem',padding:'0 10px',fontSize:'1.1rem'}} href="https://sportsclub.42web.io/?page_id=7">&nbsp;View&nbsp;</a></div>
+          <div className="wordpress-video">
             <Video autoPlay loop poster={thum}>
-                  <source src={vid1} type="video/mp4"/>
+              <source src={vid1} type="video/mp4" />
             </Video>
           </div>
+          <a className="wp-view-btn" href="https://sportsclub.42web.io/?page_id=7" target="_blank" rel="noreferrer">
+            View Live Site <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
         </div>
+      </div>
     </section>
-
   );
-};
-
+}

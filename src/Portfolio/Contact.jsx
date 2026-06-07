@@ -41,7 +41,7 @@ export default function Contact() {
       
 
   return (
-    <section className="Section">
+    <section className="Section" id="Contact">
         <h2 className="h2contact">Contact me</h2>
         <div className="contact-container">
             <div className="talk">

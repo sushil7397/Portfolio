@@ -1,170 +1,157 @@
 @import url(font.css);
 
-:root {
-  --text-gray: #cbd5e1;
-  --text-light: #94a3b8;
-  --midnight: #0f172a;
-  --bg-color: #0b0f14;
-  --white: #ffffff;
-  --primary-blue: #1e3a8a;
-  --accent-teal: #3b82f6;
-  --light-gray: #e5e7eb;
-  --dark-navy: #0f172a;
-  --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
-  --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
-  --lexend: 'lexend', sans-serif;
-  --Anton: 'Anton', cursive;
-  --Abel: 'Abel', cursive;
+.MainSection {
+  padding: 4rem 0;
 }
 
 .aboutHead {
-  margin-top: 8rem;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .about {
-  font-size: 2rem;
-  color: var(--white);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .intro {
-  font-size: 1rem;
-  color: var(--text-light);
+  font-size: 1.05rem;
+  color: #b0bec5;
+  margin-top: 0.5rem;
 }
 
 .Aboutsection {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
   justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 3rem;
 }
 
 .aboutimg {
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   height: auto;
-  border-radius: 2rem;
-  margin: 2rem 0;
+  border-radius: 16px;
+  border: 2px solid rgba(96, 165, 250, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .sidesection {
-  margin: 0 2rem;
+  flex: 1;
+  min-width: 300px;
 }
 
 .Cardfield {
   display: flex;
-  padding-top: 4rem;
-  justify-content: center;
+  gap: 1rem;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
 .field {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1rem;
-  margin: 1rem;
-  width: 10rem;
-  border: 2px solid var(--accent-teal);
-  border-radius: 1rem;
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
-  color: var(--white);
-  padding: 1.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  width: 140px;
+  padding: 1.25rem 1rem;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  color: #ffffff;
   text-align: center;
-  background: rgba(37, 99, 235, 0.1);
-  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
+.field:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.field .icon {
+  color: #60a5fa;
+  margin-bottom: 6px;
+}
+
 .fieldp {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 4px;
 }
 
 .PDesc {
-  width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   font-size: 1rem;
-  color: var(--white);
-  padding: 20px;
+  color: #cbd5e1;
+  line-height: 1.7;
   text-align: justify;
 }
 
 .buttonStyle {
-  background: var(--gradient-accent);
-  padding: 12px 24px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  padding: 12px 28px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 2rem;
-  margin-left: 1.2rem;
+  margin-top: 1.5rem;
   border: none;
-  text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.buttonLink {
-  color: var(--white);
-  font-size: 1rem;
-  padding-bottom: 10px;
-  font-weight: bold;
+.buttonStyle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
 }
 
-/* Responsive styles */
+.buttonLink {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
 
 @media (max-width: 1080px) {
+  .Aboutsection {
+    flex-direction: column;
+    text-align: center;
+  }
   .aboutimg {
-    max-width: 60%;
-    margin: 2rem auto;
+    max-width: 300px;
   }
-
-  .sidesection {
-    margin: 0;
+  .Cardfield {
+    justify-content: center;
   }
-
   .PDesc {
-    padding: 10px;
+    text-align: center;
+    padding: 0 1rem;
   }
-
   .buttonStyle {
-    margin: 2rem auto;
+    margin: 1.5rem auto;
+    display: block;
   }
 }
 
 @media (max-width: 480px) {
   .aboutHead {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
-
   .about {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-
-  .intro {
-    font-size: 1.2rem;
-  }
-
-  .aboutimg {
-    margin: 1rem auto;
-  }
-
-  .sidesection {
-    margin: 0;
-  }
-
   .field {
-    margin: 0.5rem;
+    width: 120px;
+    padding: 1rem 0.75rem;
+    font-size: 0.82rem;
   }
-
   .PDesc {
-    padding: 10px;
     font-size: 0.9rem;
-  }
-
-  .buttonStyle {
-    margin: 1.5rem auto;
   }
 }

@@ -1,179 +1,374 @@
-
 @import url(font.css);
 
-
-:root{
-    --text-gray:#cbd5e1;
-    --text-light:#94a3b8;
-    --midnight:#0f172a;
-    --bg-color:#0b0f14;
-    --white:#ffffff;
-    --primary-blue:#1e3a8a;
-    --accent-teal:#3b82f6;
-    --light-gray:#e5e7eb;
-    --dark-navy:#0f172a;
-    --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
-    --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
-    --lexend:'lexend',sans-serif;
-    --Anton:'Anton',cursive;
-    --Abel:'Abel',cursive;
+:root {
+  --text-gray: #e2e8f0;
+  --text-light: #b0bec5;
+  --midnight: #0f172a;
+  --bg-color: #0b0f14;
+  --white: #ffffff;
+  --primary-blue: #1e3a8a;
+  --accent-teal: #60a5fa;
+  --light-gray: #e5e7eb;
+  --dark-navy: #0f172a;
+  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  --lexend: 'lexend', sans-serif;
 }
-*{
+
+* {
   font-family: var(--lexend);
   font-weight: 500;
 }
-section{
+
+section {
   color: var(--white);
 }
-a{
+
+a {
   text-decoration: none;
 }
-.projecthead{
+
+/* ========== Section Headers ========== */
+.section-header {
   text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
 }
-.projecth2{
-  font-size: 2rem;
+
+.section-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.15);
+  padding: 8px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  margin-bottom: 1rem;
 }
-.projecth3{
-  font-size: 1.6rem;
-  color: #e2dada;
-  text-align: center;
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  letter-spacing: -0.5px;
 }
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: center;
 
-    
+.section-subtitle {
+  font-size: 1.15rem;
+  color: #b0bec5;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ========== Carousel Navigation ========== */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(96, 165, 250, 0.4);
+  background: rgba(59, 130, 246, 0.15);
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* ========== Carousel Container ========== */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.carousel-slide {
+  padding: 0 12px;
+}
+
+/* Slick dots styling */
+.carousel-container .slick-dots {
+  bottom: -40px;
+}
+
+.carousel-container .slick-dots li button:before {
+  color: rgba(96, 165, 250, 0.5);
+  font-size: 10px;
+}
+
+.carousel-container .slick-dots li.slick-active button:before {
+  color: #60a5fa;
+}
+
+/* ========== Project Card (Carousel) ========== */
+.project-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2), 0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(96, 165, 250, 0.15);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  white-space: nowrap;
+}
+
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.project-duration {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  margin: 0 !important;
+}
+
+.project-github-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.link-arrow {
+  font-size: 0.7rem;
+}
+
+/* ========== Professional Card Badge ========== */
+.pro-project-card {
+  border-left: 3px solid #60a5fa;
+}
+
+.pro-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  margin-bottom: 0.75rem;
+}
+
+/* ========== WordPress Showcase ========== */
+.wordpress-showcase {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.wordpress-card {
+  max-width: 550px;
+  width: 100%;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.wordpress-card:hover {
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+}
+
+.wordpress-card-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wordpress-card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.wp-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.wordpress-video {
+  padding: 0 1.5rem;
+}
+
+.wp-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 1.5rem;
+  padding: 12px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.wp-view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
   }
 
-  .card {
-    width: 320px;
-    overflow: hidden;
-    margin: 1rem;
-    border-radius: 1rem;
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
-  }
-  .card:hover{
-    background: rgba(37, 99, 235, 0.15);
-    border-color: var(--accent-teal);
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
-    transition: all 0.3s ease;
-  }
-  
-  .card:last-child {
-    margin-right: 0;
-  }
-  
-  .card-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--white);
-
-    margin: 16px;
-    /* color: var(--bg-color); */
-
-  }
-  
-  .card-description {
-    font-size: 15px;
-    text-align: justify;
-    line-height: 1.5;
-    /* color: var(--bg-color); */
-
-    margin: 0 16px 16px;
-  }
-  .card-description-text{
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: calc(1.5em * 5);
-    min-height: calc(1.5em * 5);
-  }
-  .card-description-text.expanded{
-    -webkit-line-clamp: initial;
-    max-height: none;
-    min-height: 0;
-    overflow: visible;
-  }
-  
-  .card p {
-    margin: 0 16px 16px;
-    color: var(--white);
-
-  }
-  
-  .card a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
+  .carousel-container {
+    padding: 0 1rem;
   }
 
-  
-  .card a{
-    background: var(--gradient-accent);
-    color: var(--white);
-    padding: 12px 20px;
-    display: block;
-    text-align: center;
-    margin: 20px 15px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  .project-card {
+    height: auto;
+    min-height: 380px;
   }
 
-  .card-description .read-more-button{
-    background: var(--gradient-primary);
-    color: var(--white);
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 8px;
-    display: block;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    margin: 10px 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
   }
 
-  .design-button {
-    display: inline-block;
-    flex-wrap: wrap;
-    margin: 5px;
-    height: 4rem;
-    padding: 10px 10px;
-    width: 46%;
-    overflow: hidden;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: transparent;
-    vertical-align: top;
-    border-radius: 8px;
-    border: 0.3px solid rgba(68, 92, 107, 0.988);
-    cursor: pointer;
-  }
-  
-  .design-button:hover {
-    background: linear-gradient(to top, #000000 0%, #000000ae 10%);
-  }
-  
-  .design-button:focus {
-    
-    outline: none;
+  .section-label {
+    font-size: 0.75rem;
   }
 
-  .align-center{
-    text-align: center;
+  .project-card {
+    padding: 1.5rem;
   }
+}

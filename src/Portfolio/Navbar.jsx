@@ -49,6 +49,9 @@ function Navbar() {
             <li className="nav-link">
               <a href="#Certificates">Certificates</a>
             </li>
+            <li className="nav-link">
+              <a href="#Contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,356 +1,305 @@
-
-.Section{
-    margin-top: 8rem;
+.Section {
+  margin-top: 6rem;
+  padding: 0 2rem;
 }
-
-@media all {
-  :root{
-    --bg-color:#0b0f14;
-    --text-color:#e5e7eb;
-    --text-light:#94a3b8;
-    --white:#ffffff;
-    --primary-color:#2563eb;
-    --accent-color:#3b82f6;
-    --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
-    --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
-  }
-}
-
-
 
 .h2contact {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  position: relative;
 }
 
 .h2contact::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-    border-radius: 2px;
-}
-.talkh2, .messh2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-align: center;
-    position: relative;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
 }
 
-.talkh2::after, .messh2::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background: var(--accent-color);
-    border-radius: 1px;
-}
-.Cicon{
-    font-size: 2rem;
-}
 .contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(59, 130, 246, 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(96, 165, 250, 0.15);
 }
 
 .talk {
-    flex: 1;
-    max-width: 400px;
-    padding: 1rem;
+  flex: 1;
+  max-width: 380px;
+  padding: 1rem;
 }
 
-.Contact{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20rem;
-    justify-content: center;
-}
-.email{
-    text-align: center;
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 1rem;
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 50px;
-    margin: 1rem;
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
+.talkh2, .messh2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
 }
 
-.h4style{
-    margin:0.6rem 0rem;
-    font-weight: bold;
+.talkh2::after, .messh2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #60a5fa;
+  border-radius: 1px;
 }
 
-.message{
-    flex: 1;
-    max-width: 500px;
-    padding: 1rem;
-    justify-content: center;
+.Cicon {
+  font-size: 1.8rem;
+  color: #60a5fa;
 }
-.contactForm{
-    width: 30rem;
-    padding: 50px;
-    border-radius: 1rem;
-    background: transparent;
+
+.email {
+  text-align: center;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.7) 100%);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
 }
-.formBox{
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    padding: 2rem 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
+
+.email:hover {
+  border-color: rgba(96, 165, 250, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
 }
+
+.h4style {
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.contactp {
+  color: #b0bec5;
+  font-size: 0.88rem;
+  margin: 0;
+  word-break: break-all;
+}
+
+.message {
+  flex: 1;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.formBox {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .inputBox {
-    position: relative;
-    width: 100%;
-    margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+  margin-top: 1.5rem;
 }
-.inputArea{
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 16px;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 10px;
-    outline: none;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+
+.inputArea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
 }
+
 .inputArea:focus {
-    border-color: var(--accent-color);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+  border-color: #60a5fa;
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
 }
-.TextinputArea{
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 16px;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 10px;
-    outline: none;
-    resize: vertical;
-    min-height: 120px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    font-family: inherit;
+
+.TextinputArea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
+
 .TextinputArea:focus {
-    border-color: var(--accent-color);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(22, 160, 133, 0.3);
+  border-color: #60a5fa;
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
 }
 
 .spanText {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background: var(--bg-color);
-    padding: 0 8px;
-    border-radius: 4px;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #0f172a;
+  padding: 0 6px;
+  border-radius: 4px;
 }
 
 .inputArea:focus ~ .spanText,
 .inputArea:valid ~ .spanText {
-    color: var(--accent-color);
-    font-size: 14px;
-    top: 0;
-    transform: translateY(-50%);
-    background: var(--bg-color);
+  color: #60a5fa;
+  font-size: 0.78rem;
+  top: 0;
+  transform: translateY(-50%);
 }
 
 .TextinputArea:focus ~ .spanText,
 .TextinputArea:valid ~ .spanText {
-    color: var(--accent-color);
-    font-size: 14px;
-    top: 0;
-    transform: translateY(-50%);
-    background: var(--bg-color);
+  color: #60a5fa;
+  font-size: 0.78rem;
+  top: 0;
+  transform: translateY(-50%);
 }
 
 .butt[type="submit"] {
-    width: 150px;
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-    color: #ffffff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    padding: 15px 25px;
-    margin: 1.5rem 0;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  max-width: 160px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 13px 24px;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .butt[type="submit"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(22, 160, 133, 0.4);
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-}
-
-.butt[type="submit"]:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
 }
 
 .butt[type="submit"]::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s;
 }
 
 .butt[type="submit"]:hover::before {
-    left: 100%;
+  left: 100%;
 }
 
 .butt[type="submit"]:disabled {
-    background: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-.butt[type="submit"]:disabled:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: none;
-    box-shadow: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .message-feedback {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    border-radius: 8px;
-    margin-top: 1rem;
-    font-size: 14px;
-    font-weight: 500;
-    animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
 }
 
 .message-feedback.success {
-    background: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
 }
 
 .message-feedback.error {
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
-    border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 1080px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 1.5rem;
-    }
-    
-    .talk, .message {
-        max-width: 100%;
-        padding: 0.5rem;
-    }
-    
-    .h2contact {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .talkh2, .messh2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .talk, .message {
+    max-width: 100%;
+    padding: 0;
+  }
+  .contactForm {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-container {
-        padding: 1rem;
-        gap: 1.5rem;
-        margin: 1rem;
-    }
-    
-    .h2contact {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .talkh2, .messh2 {
-        font-size: 1.3rem;
-    }
-    
-    .inputArea, .TextinputArea {
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-    
-    .butt[type="submit"] {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    .email {
-        margin-bottom: 1rem;
-    }
-}
-
-.contactp {
-    flex-wrap: wrap;
+  .contact-container {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  .h2contact {
+    font-size: 2rem;
+  }
+  .talkh2, .messh2 {
+    font-size: 1.4rem;
+  }
+  .butt[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+  }
 }

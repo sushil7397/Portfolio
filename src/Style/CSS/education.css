@@ -1,57 +1,67 @@
 @import url(font.css);
 
-
-:root{
-    --text-gray:#cbd5e1;
-    --text-light:#94a3b8;
-    --midnight:#0f172a;
-    --bg-color:#0b0f14;
-    --white:#ffffff;
-    --primary-blue:#1e3a8a;
-    --accent-teal:#3b82f6;
-    --light-gray:#e5e7eb;
-    --dark-navy:#0f172a;
-    --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
-    --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
-    --lexend:'lexend',sans-serif;
-    --Anton:'Anton',cursive;
-    --Abel:'Abel',cursive;
-}
-*{
-  font-family:var(--lexend);
+* {
+  font-family: 'lexend', sans-serif;
   font-weight: 500;
 }
-a{
+
+a {
   text-decoration: none;
 }
-.Educationh2{
-  text-align: center;
-  font-size: 1.8rem;
-}
-.Education {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: center;
-  }
 
-  .education {
-    width: 320px;
-    overflow: hidden;
-    margin: 2rem;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
+.Educationh2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.Education {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 1.5rem;
+}
+
+.education {
+  width: 320px;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.education:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+}
+
+.education .university,
+.education .Spcialization,
+.education .Duration,
+.education .Grade {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .Educationh2 {
+    font-size: 1.8rem;
   }
-  .education:hover{
-    background: rgba(37, 99, 235, 0.15);
-    border-color: var(--accent-teal);
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
-    transition: all 0.3s ease;
+  .Education {
+    padding: 0 1rem;
   }
-  
+}

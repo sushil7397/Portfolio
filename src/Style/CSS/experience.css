@@ -1,156 +1,175 @@
-
 @import url(font.css);
 
-
-:root{
-    --text-gray:#cbd5e1;
-    --text-light:#94a3b8;
-    --midnight:#0f172a;
-    --bg-color:#0b0f14;
-    --white:#ffffff;
-    --primary-blue:#1e3a8a;
-    --accent-teal:#3b82f6;
-    --light-gray:#e5e7eb;
-    --dark-navy:#0f172a;
-    --gradient-primary: linear-gradient(135deg, #0a2540 0%, #2563eb 100%);
-    --gradient-accent: linear-gradient(135deg, #0a2540 0%, #3b82f6 100%);
-    --lexend:'lexend',sans-serif;
-    --Anton:'Anton',cursive;
-    --Abel:'Abel',cursive;
-}
-*{
-  font-family: var(--lexend);
+* {
+  font-family: 'lexend', sans-serif;
   font-weight: 500;
 }
-a{
+
+a {
   text-decoration: none;
 }
-.CertHead{
+
+.CertHead {
   text-align: center;
+  margin-bottom: 2rem;
 }
-.Certh3{
-  font-size: 2rem;
-}
-.Certh4{
-  font-size: 1rem;
-  color: #e2dada;
 
+.Certh3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
 }
+
+.Certh4 {
+  font-size: 1.05rem;
+  color: #b0bec5;
+}
+
 .certs {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px; 
-    justify-content: center;   
-  }
-
-  .experi {
-    width: 420px;
-    overflow: hidden;
-    margin: 1rem;
-    border-radius: 1rem;
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-    transition: all 0.3s ease;
-  }
-  .experi:hover{
-    background: rgba(37, 99, 235, 0.15);
-    border-color: var(--accent-teal);
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
-    transition: all 0.3s ease;
-  }
-  
-  .experi:last-child {
-    margin-right: 0;
-  }
-
-  
-  .experi p {
-    margin: 0 16px 16px;
-
-  }
-  
-  .experi .certurl {
-    color: #333;
-    font-weight: bold;
-
-  }
-  .experi a{
-    background: var(--gradient-accent);
-    color: var(--white);
-    padding: 12px 20px;
-    display: block;
-    text-align: center;
-    margin: 20px 60px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-  }
-
-
-  .card-heading {
-    background: rgba(44, 62, 80, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    margin-bottom: 10px;
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-  .align{
-    display: flex;
-  }
-.exp{
-  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-  .bullet-list{
-    color: var(--white);
-    margin: 0 1rem 1rem 2rem;
-    line-height: 1.6;
-    list-style: disc;
-  }
-  .exp-section{
-    margin: 2rem auto;
-    max-width: 900px;
+
+.experi {
+  width: 420px;
+  overflow: hidden;
+  padding: 1.75rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experi:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.15);
+}
+
+.experi p {
+  margin: 0 0 8px 0;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
+.experi .cert-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+}
+
+.experi a {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.experi a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.45);
+}
+
+.card-heading {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  padding: 1.75rem;
+  margin: 1rem;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-heading:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.align {
+  display: flex;
+}
+
+.exp {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.exp-section {
+  margin: 4rem auto;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.exp-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+}
+
+.exp-content {
+  padding: 1.5rem 0 0 1.5rem;
+  border-left: 3px solid rgba(96, 165, 250, 0.35);
+}
+
+.exp-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.exp-meta {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  margin-bottom: 1.25rem;
+}
+
+.exp-list {
+  color: #cbd5e1;
+  list-style: none;
+  margin-left: 0;
+  line-height: 1.8;
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.exp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .certs {
     padding: 0 1rem;
   }
-  .exp-heading{
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
-    color: var(--white);
-    font-weight: 700;
+  .experi {
+    width: 100%;
   }
-  .exp-content{
-    padding: 0.5rem 0 0 1.25rem;
-    border-left: 2px solid rgba(59,130,246,0.35);
+  .exp-heading {
+    font-size: 1.8rem;
   }
-  .exp-title{
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.25rem;
-  }
-  .exp-subline{
-    font-size: 0.95rem;
-    color: var(--text-light);
-    margin-bottom: 0.25rem;
-  }
-  .exp-meta{
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    margin-bottom: 1rem;
-  }
-  .exp-list{
-    color: var(--white);
-    list-style: disc;
-    margin-left: 1.25rem;
-    line-height: 1.7;
-  }
-
-
-
-  
+}
