@@ -99,6 +99,11 @@
   word-break: break-all;
 }
 
+.contact-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .message {
   flex: 1;
   max-width: 500px;
